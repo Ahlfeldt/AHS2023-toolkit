@@ -32,3 +32,7 @@ Please consider the `README` files in the respective folders for further detail.
 Ahlfeldt, G. M., Heblich, S., Seidel, T. (2023): Micro-geographic property price and rent indices. Regional Science and Urban Economics, 98.
 
 Alexander Hansen has created an `R` version of the toolkit which is available here: https://github.com/hvervetid/housepriceindex
+
+**Acknowledgement**: 
+
+I thank Alexander Hansen for spotting a bug in an earlier version of the code.
