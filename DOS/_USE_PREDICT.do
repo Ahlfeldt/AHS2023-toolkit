@@ -2,8 +2,7 @@
 // By Gabriel M Ahlfeldt 2021
 // For Stata 16
 
-* Set base directory directory
-cd "D:\Dropbox\_HUB_HerreraA\Course\Repository\Replication_Directories\AHS2023-RSUE\AHS_index"
+
 
 * Set temporary woring directory
 global WD TemporaryDirectory // Name of temporary directory
