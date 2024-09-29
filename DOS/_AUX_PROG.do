@@ -39,12 +39,12 @@ display "...intital prep..."
 	qui gen NOWN = . 
 	qui gen SMD = .
 	// Gen year dummies
-		foreach year of numlist `3'/`4'{
+		qui foreach year of numlist `3'/`4'{
 		gen YD_`year' = year == `year'
 		}
 	// Drop if outside the year range
-		drop if year > `4'
-		drop if year < `3'
+		qui drop if year > `4'
+		qui drop if year < `3'
 	
 // Loop starts
 forval num = `1'/`2' { 
@@ -137,15 +137,29 @@ forval num = `1'/`2' {
 	// Generate effect for areas outside OWN radius
 		qui replace NOWN = OWN*-1+1
 		* display `SM'
+		
+	// Check if variables have no variation in the local sample and if so rename them so that they are not used in the regression
+		qui foreach var of varlist Att_* {
+			sum `var'
+			local sdsample = r(sd)
+			if `sdsample' == 0 {
+				ren `var' N`var'
+			}
+		}
+		
 	// Run regression
 	if `obs' > `Ownobs' { // Fixed effect is included, this cluster on fixed effect
-	    qui reg lprice  Att_* c.dist#i.year YD_* NOWN trend_X trend_Y c.SMD#i.year [w=W], nocons cluster(OWN) 
+	     qui reg lprice  Att_* c.dist#i.year YD_* NOWN trend_X trend_Y c.SMD#i.year [w=W], nocons cluster(OWN) 
 		}
 		else { // Fixed effect is not included, cannot cluster => Create an artificial FE for clustering to avoid inflation of t-statistic
 		qui gen SECLUSTER = dist <= `radius'*0.5
-		  qui reg lprice  Att_* c.dist#i.year YD_* NOWN trend_X trend_Y c.SMD#i.year [w=W], nocons cluster(SECLUSTER)
+		qui reg lprice  Att_* c.dist#i.year YD_* NOWN trend_X trend_Y c.SMD#i.year [w=W], nocons cluster(SECLUSTER)
 		qui drop SECLUSTER
     	}
+	
+	// Re-rename variables so that they are considered for next LWR
+		capture ren NAtt_* Att_*
+	
 	  
 	  // Parametric specification (for binary kernel weights)
 	// qui reg lprice Att_* YD_* OWN  [w=W], nocons // The non-parametric variant (for use with distance-dependent kernen)
