@@ -2,7 +2,7 @@
 
 **© Gabriel M. Ahlfeldt, Tobias Seidel**
 
-Version 0.9, 2024
+Version 0.91, 2024
 
 ## General remarks
 
@@ -32,6 +32,10 @@ Please consider the `README` files in the respective folders for further detail.
 Ahlfeldt, G. M., Heblich, S., Seidel, T. (2023): Micro-geographic property price and rent indices. Regional Science and Urban Economics, 98.
 
 Alexander Hansen has created an `R` version of the toolkit which is available here: https://github.com/hvervetid/housepriceindex
+
+## Updates 
+
+0.91: Added an additinal check for sufficient variation in covariates in locally weighted regressions 
 
 **Acknowledgement**: 
 
