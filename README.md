@@ -8,7 +8,7 @@ Version 0.91, 2024
 
 This toolkit covers the algorithm by Ahlfeldt, Heblich, Seidel (2023) to generate micro-geographic property price and rent indices for arbitrary spatial units based on transaction data. It includes a replicable analysis based on artificial data for illustration. It also includes the indices created by Ahlfeldt, Heblich, Seidel (2023) for Germany. The underlying micro-data for replication need to be accessed from the Forschungsdatenzentrum at RWI-Essen.
 
-When using the toolkit in your work, please cite Ahlfeldt, Heblich, Seidel (2023).
+When using the toolkit in your work, please cite Ahlfeldt, Heblich, Seidel (2023): Micro-geographic property price and rent indices. Regional Science and Urban Economics, 98.
 
 ## How to Use the Toolkit
 
@@ -29,7 +29,7 @@ Please consider the `README` files in the respective folders for further detail.
 
 ## Further resources:
 
-Ahlfeldt, G. M., Heblich, S., Seidel, T. (2023): Micro-geographic property price and rent indices. Regional Science and Urban Economics, 98.
+Ahlfeldt, G. M., Heblich, S., Seidel, T. (2023): Micro-geographic property price and rent indices. Regional Science and Urban Economics, 98. https://doi.org/10.1016/j.regsciurbeco.2022.103836
 
 Alexander Hansen has created an `R` version of the toolkit which is available here: https://github.com/hvervetid/housepriceindex
 
