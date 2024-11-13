@@ -8,7 +8,7 @@ Version 0.91, 2024
 
 This toolkit covers the algorithm by Ahlfeldt, Heblich, Seidel (2023) to generate micro-geographic property price and rent indices for arbitrary spatial units based on transaction data. It includes a replicable analysis based on **artificial data** for illustration. 
 
-This toolkit also includes the indices created by Ahlfeldt, Heblich, Seidel (2023) for Germany. We keep updating these indices as time goes by. These micro-geographic property price indices are based on **real micro-data** from Scout24. They can be found in the folder [APPLICATIONS/DATA/OUTPUT](https://github.com/Ahlfeldt/AHS2023-toolkit/tree/main/APPLICATIONS/DATA/OUTPUT)
+This toolkit also includes the indices created by Ahlfeldt, Heblich, Seidel (2023) for Germany. We keep updating these indices as time goes by. These micro-geographic property price indices are based on **real micro-data** from Scout24. They can be found in the following sub-folder: [APPLICATIONS/DATA/OUTPUT](https://github.com/Ahlfeldt/AHS2023-toolkit/tree/main/APPLICATIONS/DATA/OUTPUT)
 . For replication, the underlying microdata must be accessed from the Forschungsdatenzentrum at RWI-Essen. 
 
 When using the toolkit in your work, please cite Ahlfeldt, Heblich, Seidel (2023): Micro-geographic property price and rent indices. Regional Science and Urban Economics, 98.
