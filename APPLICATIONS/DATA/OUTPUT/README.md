@@ -14,4 +14,4 @@ When using these data in your work, please cite Ahlfeldt, Heblich, Seidel (2023)
 
 The `2022` edition of the index was published with the research article and covers the years 2007-2021 for various spatial units.
 
-The `2024` edition updates the index, extending it to 2007-2023. It is available for municipality (Verbandsgemeinden, 2022 definition) and postcodes (Polstleitzahlengebiete).
+The `2024` edition updates the index, extending it to 2007-2023. It is available for municipalities (Gemeinden, GEM, 2021 definition), municipal associations (Verbandsgemeinden, VBG, 2022 definition), and postcodes (Polstleitzahlengebiete, PLZ, 2020 definition).
