@@ -52,3 +52,4 @@ Alexander Hansen has created an `R` version of the toolkit which is available he
 **Acknowledgement**: 
 
 I thank Alexander Hansen for spotting a bug in an earlier version of the code.
+I thank Vincent Heddesheimer for helping with the creation of the 2024 municipality (Gemeinde) index.
