@@ -49,6 +49,7 @@ Alexander Hansen has created an `R` version of the toolkit which is available he
 ## Updates to the data
 13/11/2024: Added German postcode rent and price indices from 2007-2023
 22/11/2024: Added German municipality (Gemeinde) rent and price indices from 2007-2023
+13/12/2024: Added German local labour market (Arbeitsmarktregion) rent and price indices from 2007-2023
 
 **Acknowledgement**: 
 
