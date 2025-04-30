@@ -17,7 +17,7 @@ When using the toolkit in your work, please cite Ahlfeldt, Heblich, Seidel (2023
 
 ## How to Use the Toolkit
 
-You can download the toolkit and use it as a starting point for your own analysis. The algorithm requires two input files containing your observed market transactions and the centroids of the spatial units for which you wish to generate the index. These are stored in the folder `DATA/INPUT`. You can replace these with your transaction data sets and your coordinates. Please ensure that the files you replace them with are in exactly the same format; i.e. you should use exactly the same variable names. All coordinates need to be in projected units of the same dimension. You may use a different ID variable name in the `centroids.dta` file as long as you update that variable name in the `DO/MASTER.do` do file.  
+You can download the toolkit and use it as a starting point for your own analysis. The algorithm requires two input files containing your observed market transactions and the centroids of the spatial units for which you wish to generate the index. These are stored in the folder `DATA/INPUT`. You can replace these with your transaction data sets and your coordinates. Please ensure that the files you replace them with are in exactly the same format; i.e. you should use exactly the same variable names. All coordinates need to be in projected units of the same dimension. You may use a different ID variable name in the `centroids.dta` file as long as you update that variable name in the `DO/_USE_PREDICT.do` do file.  
 
 Please consider the `README` files in the respective folders for further detail.
 
