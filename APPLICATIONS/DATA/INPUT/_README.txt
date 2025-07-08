@@ -4,6 +4,7 @@ centroid_*				The target coordinates for the respective spatial units used by th
 					These need to be renamed to "centroid.dta" and copied to the DATA/INPUT input folder to reproduce the German indices
 	
 postcode_covariats			Contains measures of distance from the CBD, income, photos, and tree coverage at the postcode level for all of Germany.
+					Income data are as follows: GfK Bevölkerungsstrukturdaten 2005 für alle 5-stelligen Postleitgebiete in Deutschland	
 postcode_Siedlungsstrukturtyp		Contains the settlement type defined by the the Bundesamt für Bauwesen und Raumordnung.
 	
 RWI-GEO-RED				Folder containing real property rent and price micro data that can be input into the AHS algorithm and the underlying data generation
