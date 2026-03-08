@@ -16,4 +16,4 @@ The `2022` edition of the index was published with the research article and cove
 
 The `2024` edition updates the index, extending it to 2007-2023. It is available for municipalities (Gemeinden, GEM, 2021 definition), municipal associations (Verbandsgemeinden, VBG, 2022 definition), and postcodes (Polstleitzahlengebiete, PLZ, 2020 definition).
 
-The `2025` edition updates the index, extending it to 2007-2024. It is available for municipalities (Gemeinden, GEM, 2021 definition), municipal associations (Verbandsgemeinden, VBG, 2022 definition), and postcodes (Polstleitzahlengebiete, PLZ, 2020 definition).
+The `2025` edition updates the index, extending it to 2007-2024. 
