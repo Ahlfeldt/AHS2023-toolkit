@@ -15,7 +15,7 @@ We provide an **interactive webtool** to illustrate the latest edition of the po
 When using the toolkit in your work, please cite Ahlfeldt, Heblich, and Seidel (2023): “Micro-geographic property price and rent indices.” Regional Science and Urban Economics, 98. https://doi.org/10.1016/j.regsciurbeco.2022.103836.
 This applies to all not-for-profit uses and includes any use of the micro-geographic indices published in this repository.
 
-Note the complementary [AHSY-toolkit](https://github.com/Ahlfeldt/AHSY-toolkit), which provides micro-geographic **commercial rent indices** using a similar methodology developed by [Ahlfeldt Heblich, Seidel, Yin (2026)]{https://github.com/Ahlfeldt/DPs/blob/main/GA_SH_TS_FY_-_Productivity.pdf}. 
+Note the complementary [AHSY-toolkit](https://github.com/Ahlfeldt/AHSY-toolkit), which provides micro-geographic **commercial rent indices** using a similar methodology developed by [Ahlfeldt Heblich, Seidel, Yin (2026)](https://github.com/Ahlfeldt/DPs/blob/main/GA_SH_TS_FY_-_Productivity.pdf). 
 
 ## How to Use the Toolkit
 
@@ -43,7 +43,7 @@ Please consider the `README` files in the respective folders for further detail.
 
 Ahlfeldt, G. M., Heblich, S., Seidel, T. (2023): Micro-geographic property price and rent indices. Regional Science and Urban Economics, 98. https://doi.org/10.1016/j.regsciurbeco.2022.103836
 
-Ahlfeldt, Heblich, Seidel, Yin (2026): The price of productivity. Berlin School of Economics Discussion Paper. [link]{https://github.com/Ahlfeldt/DPs/blob/main/GA_SH_TS_FY_-_Productivity.pdf}
+Ahlfeldt, Heblich, Seidel, Yin (2026): The price of productivity. Berlin School of Economics Discussion Paper. [link](https://github.com/Ahlfeldt/DPs/blob/main/GA_SH_TS_FY_-_Productivity.pdf)
 
 Alexander Hansen has created an `R` version of the toolkit which is available here: https://github.com/hvervetid/housepriceindex
 
