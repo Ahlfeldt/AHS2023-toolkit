@@ -17,3 +17,8 @@ The `2022` edition of the index was published with the research article and cove
 The `2024` edition updates the index, extending it to 2007-2023. It is available for municipalities (Gemeinden, GEM, 2021 definition), municipal associations (Verbandsgemeinden, VBG, 2022 definition), and postcodes (Polstleitzahlengebiete, PLZ, 2020 definition).
 
 The `2025` edition updates the index, extending it to 2007-2024. 
+
+## Usage
+
+When using the toolkit in your work, please cite Ahlfeldt, Heblich, Seidel (2023): Micro-geographic property price and rent indices. Regional Science and Urban Economics, 98. https://doi.org/10.1016/j.regsciurbeco.2022.103836
+This includes usage of any of the micro-geographic indicies published in this repository.
