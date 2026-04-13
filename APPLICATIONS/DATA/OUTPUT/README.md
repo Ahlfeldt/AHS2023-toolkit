@@ -20,5 +20,9 @@ The `2025` edition updates the index, extending it to 2007-2024.
 
 ## Usage
 
-When using the toolkit in your work, please cite Ahlfeldt, Heblich, Seidel (2023): Micro-geographic property price and rent indices. Regional Science and Urban Economics, 98. https://doi.org/10.1016/j.regsciurbeco.2022.103836
-This includes usage of any of the micro-geographic indicies published in this repository.
+When using the toolkit in your work, please cite Ahlfeldt, Heblich, and Seidel (2023): “Micro-geographic property price and rent indices.” Regional Science and Urban Economics, 98. https://doi.org/10.1016/j.regsciurbeco.2022.103836.
+This applies to all not-for-profit uses and includes any use of the micro-geographic indices published in this repository.
+
+## Commercial indices
+
+Similar commercial property price indices are available from the [AHSY-toolkit]{8https://github.com/Ahlfeldt/AHSY-toolkit} based on the methodology developed by [Ahlfeldt, Heblich, Seidel, Yin (2026)]{https://github.com/Ahlfeldt/DPs/blob/main/GA_SH_TS_FY_-_Productivity.pdf}. 
