@@ -13,7 +13,7 @@ This toolkit also includes the indices created by Ahlfeldt, Heblich, Seidel (202
 We provide an **interactive webtool** to illustrate the latest edition of the post-code level price and rent indices for Germany [here](https://sites.google.com/view/ahlfeldt/toolkits-and-webtools/property-price-indices/germany-ahs-index).
 
 When using the toolkit in your work, please cite Ahlfeldt, Heblich, Seidel (2023): Micro-geographic property price and rent indices. Regional Science and Urban Economics, 98. https://doi.org/10.1016/j.regsciurbeco.2022.103836
-This includes usage of any of the micro-geographic indicies published in this repository.
+This entails all not-for-profit uses and includes usage of any of the micro-geographic indices published in this repository.
 
 Note the complementary [AHSY-toolkit](https://github.com/Ahlfeldt/AHSY-toolkit), which provides micro-geographic **commercial rent indices** using a similar methodology developed by [Ahlfeldt Heblich, Seidel, Yin (2026)]{https://github.com/Ahlfeldt/DPs/blob/main/GA_SH_TS_FY_-_Productivity.pdf}. 
 
