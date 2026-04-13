@@ -25,4 +25,4 @@ This applies to all not-for-profit uses and includes any use of the micro-geogra
 
 ## Commercial indices
 
-Similar commercial property price indices are available from the [AHSY-toolkit]{8https://github.com/Ahlfeldt/AHSY-toolkit} based on the methodology developed by [Ahlfeldt, Heblich, Seidel, Yin (2026)]{https://github.com/Ahlfeldt/DPs/blob/main/GA_SH_TS_FY_-_Productivity.pdf}. 
+Similar commercial property price indices are available from the [AHSY-toolkit](https://github.com/Ahlfeldt/AHSY-toolkit) based on the methodology developed by [Ahlfeldt, Heblich, Seidel, Yin (2026)](https://github.com/Ahlfeldt/DPs/blob/main/GA_SH_TS_FY_-_Productivity.pdf). 
