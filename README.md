@@ -15,7 +15,7 @@ We provide an **interactive webtool** to illustrate the latest edition of the po
 When using the toolkit in your work, please cite Ahlfeldt, Heblich, and Seidel (2023): “Micro-geographic property price and rent indices.” Regional Science and Urban Economics, 98. https://doi.org/10.1016/j.regsciurbeco.2022.103836.
 This applies to all not-for-profit uses and includes any use of the micro-geographic indices published in this repository.
 
-Note the complementary [AHSY-toolkit](https://github.com/Ahlfeldt/AHSY-toolkit), which provides micro-geographic **commercial rent indices** using a similar methodology developed by [Ahlfeldt Heblich, Seidel, Yin (2026)](https://github.com/Ahlfeldt/DPs/blob/main/GA_SH_TS_FY_-_Productivity.pdf). 
+Note the complementary [AHSY-toolkit](https://github.com/Ahlfeldt/AHSY-toolkit), which extends the methodology developed by [Ahlfeldt, Heblich, Seidel, Yin (2026)](https://github.com/Ahlfeldt/DPs/blob/main/GA_SH_TS_FY_-_Productivity.pdf). In contrast to the original methodology implemented here, the AHSY-toolkit uses distance-weighted observations within locally determined catchment areas rather than a parametric distance gradient and identifies the smallest possible radius satisfying a minimum observation threshold instead of selecting from a predefined set of radii. The AHSY-toolkit provides both commercial and residential property price and rent indices based on this modified methodology and complements the residential indices published in the present repository.
 
 ## How to Use the Toolkit
 
@@ -54,11 +54,15 @@ Alexander Hansen has created an `R` version of the toolkit which is available he
 0.91: Added an additional check for sufficient variation in covariates in locally weighted regressions 
 
 ## Updates to the data
+
 13/11/2024: Added German postcode rent and price indices from 2007-2023
+
 22/11/2024: Added German municipality (Gemeinde) rent and price indices from 2007-2023
+
 13/12/2024: Added German local labour market (Arbeitsmarktregion) rent and price indices from 2007-2023
 
 **Acknowledgement**: 
 
 I thank Alexander Hansen for spotting a bug in an earlier version of the code.
+
 I thank Vincent Heddesheimer for helping with the creation of the 2024 municipality (Gemeinde) index.
