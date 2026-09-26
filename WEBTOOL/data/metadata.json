@@ -1,0 +1,49 @@
+{
+  "countries": {
+    "de": {
+      "label": "Germany",
+      "area_label": "Postcode",
+      "search_placeholder": "e.g. 10117",
+      "geography": "data/de_areas.geojson.gz",
+      "boundaries": "data/de_boundaries.geojson.gz",
+      "count": 8255
+    },
+    "gb": {
+      "label": "England & Wales",
+      "area_label": "LSOA",
+      "search_placeholder": "e.g. E01000001",
+      "geography": "data/gb_areas.geojson.gz",
+      "boundaries": "data/gb_boundaries.geojson.gz",
+      "count": 34753
+    }
+  },
+  "products": {
+    "de_purchase": {
+      "country": "de",
+      "label": "Residential purchase price",
+      "unit": "€ per m²",
+      "file": "data/de_purchase.csv.gz",
+      "first_year": 2007,
+      "last_year": 2025,
+      "observations": 156845
+    },
+    "de_rent": {
+      "country": "de",
+      "label": "Residential rent",
+      "unit": "€ per m²/month",
+      "file": "data/de_rent.csv.gz",
+      "first_year": 2007,
+      "last_year": 2025,
+      "observations": 156845
+    },
+    "gb_purchase": {
+      "country": "gb",
+      "label": "Residential purchase price",
+      "unit": "£ per m²",
+      "file": "data/gb_purchase.csv.gz",
+      "first_year": 2010,
+      "last_year": 2020,
+      "observations": 382283
+    }
+  }
+}

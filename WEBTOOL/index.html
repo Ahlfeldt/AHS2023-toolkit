@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore the AHS and LSE-REEF micro-geographic residential property indices.">
+  <title>AHS / LSE-REEF Property Price Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="style.css?v=20260927-1">
+  <script defer src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/d3-tile@1/dist/d3-tile.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.js"></script>
+  <script defer src="main.js?v=20260927-1"></script>
+</head>
+<body>
+  <main class="app-shell">
+    <section class="toolbar" aria-label="Map controls">
+      <label><span>Country</span><select id="country" disabled></select></label>
+      <label><span>Market</span><select id="product" disabled></select></label>
+      <label class="year-control">
+        <span>Year <strong id="year-label">2025</strong></span>
+        <input id="year" type="range" min="2007" max="2025" value="2025" step="1" disabled>
+      </label>
+      <label>
+        <span id="search-label">Find a postcode</span>
+        <div class="search-row">
+          <input id="area-search" autocomplete="off" placeholder="e.g. 10117" disabled>
+          <button id="search" type="button" disabled>Show</button>
+        </div>
+      </label>
+      <label class="opacity-control">
+        <span>Index opacity <strong id="opacity-label">82%</strong></span>
+        <input id="map-opacity" type="range" min="0" max="100" value="82" step="1" disabled>
+      </label>
+      <div class="status" id="status" role="status"><span class="spinner"></span> Loading the atlas…</div>
+    </section>
+
+    <section class="dashboard">
+      <article class="panel map-panel">
+        <div class="panel-heading">
+          <div><p class="kicker" id="map-kicker">Residential purchase price</p><h2 id="map-title">Price level</h2></div>
+          <button id="reset-map" class="quiet-button" type="button" disabled>Reset map</button>
+        </div>
+        <div id="map" aria-label="Interactive property-price map">
+          <div class="map-attribution">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</div>
+        </div>
+        <div id="legend" class="legend" aria-label="Map legend"></div>
+        <div id="tooltip" class="tooltip" hidden></div>
+      </article>
+
+      <aside class="panel detail-panel">
+        <div class="selection-summary">
+          <p class="kicker">Selected area</p>
+          <h2 id="selected-area">Choose an area</h2>
+          <p id="selected-name" class="area-name"></p>
+          <p id="selected-value" class="big-number">—</p>
+          <p id="selected-unit" class="muted">Click an area on the map or use the search box.</p>
+        </div>
+        <div class="chart-wrap"><canvas id="history-chart"></canvas></div>
+        <dl class="facts">
+          <div><dt id="fact-one-label">Transactions</dt><dd id="fact-one">—</dd></div>
+          <div><dt id="fact-two-label">Within</dt><dd id="fact-two">—</dd></div>
+        </dl>
+        <p class="note" id="data-note"></p>
+      </aside>
+    </section>
+
+    <footer id="source-note"></footer>
+  </main>
+</body>
+</html>
