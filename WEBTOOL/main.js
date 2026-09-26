@@ -168,7 +168,7 @@ function updateContext() {
   const reef=state.country==="gb";
   $("fact-one-label").textContent=reef?"Standard error":"Transactions"; $("fact-two-label").textContent=reef?"Geography":"Within";
   $("data-note").textContent=reef?"LSE-REEF estimates cover lower-layer super output areas in England and Wales from 2010 to 2020.":"The AHS estimates use German residential listings and cover postcode areas from 2007 to 2025.";
-  $("source-note").innerHTML=reef?"<p><strong>LSE-REEF Property Price Index.</strong> Data: Ahlfeldt, Carozzi &amp; Makovsky (2023), <em>A micro-geographic house price index for England and Wales</em>. Values are model-based estimates and should not be interpreted as valuations of individual properties.</p>":"<p><strong>AHS Property Price Index.</strong> Data: Ahlfeldt, Heblich &amp; Seidel (2023), <em>Micro-geographic property price and rent indices</em>. Values are model-based estimates and should not be interpreted as valuations of individual properties.</p>";
+  $("source-note").innerHTML="<p><strong>AHS and LSE-REEF Property Price Indices.</strong> Data: Ahlfeldt, Heblich &amp; Seidel (2023), <em>Micro-geographic property price and rent indices</em>; and Ahlfeldt, Carozzi &amp; Makovsky (2023), <em>A micro-geographic house price index for England and Wales</em>. Values are model-based estimates and should not be interpreted as valuations of individual properties.</p>";
 }
 
 async function updateMap() {
