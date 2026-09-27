@@ -14,7 +14,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/d3-tile@1/dist/d3-tile.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.js"></script>
-  <script defer src="main.js?v=20260927-5"></script>
+  <script defer src="main.js?v=20260927-6"></script>
 </head>
 <body>
   <main class="app-shell">
@@ -34,8 +34,8 @@
             <input id="year" type="range" min="2007" max="2025" value="2025" step="1" disabled>
           </label>
           <label class="opacity-control">
-            <span>Index transparency <strong id="opacity-label">18%</strong></span>
-            <input id="map-opacity" type="range" min="0" max="100" value="18" step="1" disabled>
+            <span>Index transparency <strong id="opacity-label">0%</strong></span>
+            <input id="map-opacity" type="range" min="0" max="100" value="0" step="1" disabled>
           </label>
         </div>
       </div>
@@ -49,6 +49,10 @@
               <input id="area-search" autocomplete="off" placeholder="e.g. 10117" disabled>
               <button id="search" type="button" disabled>Show</button>
             </div>
+          </label>
+          <label class="area-year-control">
+            <span>Year <strong id="area-year-label">2025</strong></span>
+            <input id="area-year" type="range" min="2007" max="2025" value="2025" step="1" disabled>
           </label>
         </div>
       </div>

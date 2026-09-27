@@ -10,7 +10,7 @@ button,input,select { font:inherit; }
 .control-block + .control-block { padding-top:14px; border-top:1px solid #ddd8cf; }
 .control-block>h2 { align-self:center; font-size:1rem; font-weight:900; letter-spacing:.01em; }
 .overview-controls { display:grid; grid-template-columns:minmax(190px,1.1fr) minmax(230px,1.25fr) minmax(105px,.55fr) minmax(175px,1fr) minmax(175px,1fr); gap:16px; align-items:end; }
-.finder-controls { display:grid; grid-template-columns:minmax(180px,.5fr) minmax(270px,1.5fr); gap:16px; align-items:end; max-width:720px; }
+.finder-controls { display:grid; grid-template-columns:minmax(165px,.55fr) minmax(260px,1.25fr) minmax(210px,1fr); gap:16px; align-items:end; max-width:980px; }
 .area-entry { min-width:0; }
 label>span { display:flex; justify-content:space-between; margin-bottom:8px; font-size:.76rem; font-weight:800; letter-spacing:.07em; text-transform:uppercase; }
 .country-control { min-width:0; margin:0; padding:0; border:0; }
