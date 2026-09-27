@@ -5,8 +5,12 @@ body { margin:0; }
 button,input,select { font:inherit; }
 .app-shell { max-width:1500px; margin:0 auto; padding:0 clamp(18px,4vw,64px) 28px; }
 .kicker { margin:0 0 8px; color:var(--accent); font-size:.73rem; font-weight:900; letter-spacing:.1em; text-transform:uppercase; }
-.toolbar { display:grid; grid-template-columns:minmax(140px,.75fr) minmax(190px,1fr) minmax(210px,1.25fr) minmax(190px,1fr) minmax(155px,.75fr); gap:16px; align-items:end; padding:20px; background:var(--soft); border:1px solid var(--line); border-bottom:0; }
+.toolbar { display:grid; grid-template-columns:minmax(190px,1.1fr) minmax(230px,1.25fr) minmax(120px,.65fr) minmax(210px,1.15fr) minmax(210px,1.1fr) minmax(155px,.75fr); gap:16px; align-items:end; padding:20px; background:var(--soft); border:1px solid var(--line); border-bottom:0; }
 label>span { display:flex; justify-content:space-between; margin-bottom:8px; font-size:.76rem; font-weight:800; letter-spacing:.07em; text-transform:uppercase; }
+.country-control { min-width:0; margin:0; padding:0; border:0; }
+.country-control legend { margin-bottom:8px; padding:0; font-size:.76rem; font-weight:800; letter-spacing:.07em; text-transform:uppercase; }
+.country-control label { display:inline-flex; align-items:center; gap:6px; margin:0 14px 7px 0; font-size:.82rem; white-space:nowrap; }
+.country-control input { accent-color:var(--accent); }
 select,input[type="text"],input:not([type]) { width:100%; min-height:43px; border:1px solid #c9c5bd; border-radius:2px; background:#fff; color:var(--ink); padding:9px 11px; outline:none; }
 input::placeholder { color:#929292; }
 input:focus,select:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(133,114,81,.14); }
@@ -14,6 +18,7 @@ input[type="range"] { width:100%; accent-color:var(--accent); }
 .search-row { display:grid; grid-template-columns:1fr auto; gap:8px; }
 .search-row button { border:0; border-radius:2px; background:var(--accent); color:#fff; padding:0 15px; font-weight:900; cursor:pointer; }
 .status { grid-column:1/-1; color:var(--muted); font-size:.82rem; line-height:1.35; }
+.fx-note { grid-column:1/-1; margin:-5px 0 -5px; color:var(--muted); font-size:.74rem; line-height:1.35; }
 .status.ready { color:var(--accent-dark); }
 .status.error { color:#9a3b2d; }
 .spinner { display:inline-block; width:11px; height:11px; margin-right:8px; border:2px solid #d0cbc1; border-top-color:var(--accent); border-radius:50%; animation:spin .8s linear infinite; }
