@@ -62,5 +62,8 @@ h2 { margin:0; font-size:clamp(1.35rem,2vw,2rem); font-weight:700; }
 .facts dd { margin:6px 0 0; font-size:.95rem; font-weight:750; }
 .note { margin:auto 0 0; padding-top:24px; color:var(--muted); font-size:.74rem; line-height:1.5; }
 footer { max-width:1050px; margin-top:22px; color:var(--muted); font-size:.78rem; line-height:1.55; }
+.download-links { margin:0 0 8px; color:var(--ink); }
+.download-links a { color:var(--accent-dark); font-weight:700; text-decoration-thickness:1px; text-underline-offset:2px; }
+.download-links a:hover { color:var(--accent); }
 @media(max-width:1120px){.toolbar{grid-template-columns:1fr 1fr}.dashboard{grid-template-columns:1fr}#map{height:620px}}
 @media(max-width:650px){.app-shell{padding:0 10px 20px}.toolbar{grid-template-columns:1fr}.dashboard{grid-template-columns:1fr}#map{height:500px}.facts{grid-template-columns:1fr}}
