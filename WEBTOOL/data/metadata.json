@@ -15,6 +15,14 @@
       "geography": "data/gb_areas.geojson.gz",
       "boundaries": "data/gb_boundaries.geojson.gz",
       "count": 34753
+    },
+    "fr": {
+      "label": "France",
+      "area_label": "Commune",
+      "search_placeholder": "e.g. FR75101",
+      "geography": "data/fr_areas.geojson.gz",
+      "boundaries": "data/fr_boundaries.geojson.gz",
+      "count": 33183
     }
   },
   "products": {
@@ -22,6 +30,7 @@
       "country": "de",
       "label": "Residential purchase price",
       "unit": "€ per m²",
+      "currency": "EUR",
       "file": "data/de_purchase.csv.gz",
       "first_year": 2007,
       "last_year": 2025,
@@ -31,6 +40,7 @@
       "country": "de",
       "label": "Residential rent",
       "unit": "€ per m²/month",
+      "currency": "EUR",
       "file": "data/de_rent.csv.gz",
       "first_year": 2007,
       "last_year": 2025,
@@ -40,10 +50,21 @@
       "country": "gb",
       "label": "Residential purchase price",
       "unit": "£ per m²",
+      "currency": "GBP",
       "file": "data/gb_purchase.csv.gz",
       "first_year": 2010,
       "last_year": 2020,
       "observations": 382283
+    },
+    "fr_purchase": {
+      "country": "fr",
+      "label": "Residential purchase price",
+      "unit": "€ per m²",
+      "currency": "EUR",
+      "file": "data/fr_purchase.csv.gz",
+      "first_year": 2014,
+      "last_year": 2025,
+      "observations": 398196
     }
   }
 }

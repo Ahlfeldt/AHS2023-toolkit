@@ -12,7 +12,7 @@ This toolkit also includes the indices created by Ahlfeldt, Heblich, Seidel (202
 
 We provide an **interactive webtool** to illustrate the latest edition of the post-code level price and rent indices for Germany [here](https://sites.google.com/view/ahlfeldt/toolkits-and-webtools/property-price-indices/germany-ahs-index).
 
-The repository also includes a browser-based **AHS / LSE-REEF Property Price Atlas** under [`WEBTOOL`](WEBTOOL). It combines the German AHS postcode indices with the LSE-REEF lower-layer super output area index for England and Wales on one European map. Users can select one or both countries and report comparable levels in euros or pounds using the latest available ECB reference rate.
+The repository also includes a browser-based **AHS / LSE-REEF Property Price Atlas** under [`WEBTOOL`](WEBTOOL). It combines the German AHS postcode indices, the French AHS commune index, and the LSE-REEF lower-layer super output area index for England and Wales on one European map. Users can select one or more countries and report comparable levels in euros or pounds using the latest available ECB reference rate.
 
 When using the toolkit in your work, please cite Ahlfeldt, Heblich, and Seidel (2023): “Micro-geographic property price and rent indices.” Regional Science and Urban Economics, 98. https://doi.org/10.1016/j.regsciurbeco.2022.103836.
 This applies to all not-for-profit uses and includes any use of the micro-geographic indices published in this repository.

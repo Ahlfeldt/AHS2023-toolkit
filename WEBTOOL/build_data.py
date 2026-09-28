@@ -16,6 +16,7 @@ OUTPUT = ROOT / "WEBTOOL" / "data"
 GERMAN_DATA = ROOT / "APPLICATIONS" / "DATA" / "OUTPUT" / "2026"
 GERMAN_SHAPES = ROOT / "APPLICATIONS" / "SHAPES"
 REEF = ROOT / "APPLICATIONS" / "ENGLAND_WALES"
+FRANCE = ROOT / "APPLICATIONS" / "FRANCE"
 
 STATE_NAMES = {
     "01": "Schleswig-Holstein", "02": "Hamburg", "03": "Lower Saxony",
@@ -28,23 +29,36 @@ STATE_NAMES = {
 
 PRODUCTS = {
     "de_purchase": {
-        "country": "de", "label": "Residential purchase price", "unit": "€ per m²",
+        "country": "de", "label": "Residential purchase price", "unit": "€ per m²", "currency": "EUR",
         "source": GERMAN_DATA / "AHS-Index-res-PURCH-PLZ-2026" / "AHS-Index-res-PURCH-PLZ-2026-long.csv",
     },
     "de_rent": {
-        "country": "de", "label": "Residential rent", "unit": "€ per m²/month",
+        "country": "de", "label": "Residential rent", "unit": "€ per m²/month", "currency": "EUR",
         "source": GERMAN_DATA / "AHS-Index-res-RENT-PLZ-2026" / "AHS-Index-res-RENT-PLZ-2026-long.csv",
     },
     "gb_purchase": {
-        "country": "gb", "label": "Residential purchase price", "unit": "£ per m²",
+        "country": "gb", "label": "Residential purchase price", "unit": "£ per m²", "currency": "GBP",
         "source": REEF / "Data" / "LSE-REEF-INDEX-2020.csv",
+    },
+    "fr_purchase": {
+        "country": "fr", "label": "Residential purchase price", "unit": "€ per m²", "currency": "EUR",
+        "source": FRANCE / "Data" / "AHS-FRANCE-COMMUNE-2026.csv",
     },
 }
 
 
-def write_geojson(frame: gpd.GeoDataFrame, name: str) -> None:
+def write_geojson(frame: gpd.GeoDataFrame, name: str, streaming: bool = False) -> None:
     frame = frame.to_crs(4326)
     frame["geometry"] = shapely.set_precision(frame.geometry.array, grid_size=0.00001)
+    if streaming:
+        with gzip.open(OUTPUT / name, "wt", encoding="utf-8") as stream:
+            stream.write('{"type":"FeatureCollection","features":[')
+            for index, feature in enumerate(frame.iterfeatures(drop_id=True, na="null")):
+                if index:
+                    stream.write(",")
+                json.dump(feature, stream, ensure_ascii=False, separators=(",", ":"))
+            stream.write("]}")
+        return
     with gzip.open(OUTPUT / name, "wt", encoding="utf-8") as stream:
         stream.write(frame.to_json(drop_id=True, separators=(",", ":")))
 
@@ -71,7 +85,17 @@ def build_geographies() -> dict[str, int]:
     outline["area"] = "EW"
     outline["name"] = "England & Wales"
     write_geojson(outline[["area", "name", "geometry"]], "gb_boundaries.geojson.gz")
-    return {"de": len(postcodes), "gb": len(lsoas)}
+
+    france_shape = FRANCE / "Shapefile" / "AHS-FRANCE-COMMUNE-2026.shp"
+    communes = gpd.read_file(france_shape)[["area", "name", "geometry"]]
+    communes["area"] = communes["area"].astype(str)
+    write_geojson(communes, "fr_areas.geojson.gz", streaming=True)
+
+    france_outline = gpd.read_file(
+        FRANCE / "Boundary" / "AHS-FRANCE-BOUNDARY-2026.shp"
+    )[["area", "name", "geometry"]]
+    write_geojson(france_outline[["area", "name", "geometry"]], "fr_boundaries.geojson.gz")
+    return {"de": len(postcodes), "gb": len(lsoas), "fr": len(communes)}
 
 
 def build_german_product(key: str, config: dict[str, object]) -> dict[str, object]:
@@ -99,12 +123,19 @@ def build_reef_product(key: str, config: dict[str, object]) -> dict[str, object]
     return write_product(key, config, frame.sort_values(["area", "year"]))
 
 
+def build_standard_product(key: str, config: dict[str, object]) -> dict[str, object]:
+    columns = ["area", "name", "year", "value", "se", "obs", "radius"]
+    frame = pd.read_csv(config["source"], dtype={"area": str}, usecols=columns)
+    return write_product(key, config, frame.sort_values(["area", "year"]))
+
+
 def write_product(key: str, config: dict[str, object], frame: pd.DataFrame) -> dict[str, object]:
     with gzip.open(OUTPUT / f"{key}.csv.gz", "wt", encoding="utf-8", newline="") as stream:
         frame.to_csv(stream, index=False, float_format="%.6g")
     valid = frame["value"].notna()
     return {
         "country": config["country"], "label": config["label"], "unit": config["unit"],
+        "currency": config["currency"],
         "file": f"data/{key}.csv.gz", "first_year": int(frame.loc[valid, "year"].min()),
         "last_year": int(frame.loc[valid, "year"].max()), "observations": int(valid.sum()),
     }
@@ -115,11 +146,17 @@ def main() -> None:
     counts = build_geographies()
     products = {}
     for key, config in PRODUCTS.items():
-        products[key] = build_reef_product(key, config) if key.startswith("gb_") else build_german_product(key, config)
+        if key.startswith("gb_"):
+            products[key] = build_reef_product(key, config)
+        elif key.startswith("fr_"):
+            products[key] = build_standard_product(key, config)
+        else:
+            products[key] = build_german_product(key, config)
     payload = {
         "countries": {
             "de": {"label": "Germany", "area_label": "Postcode", "search_placeholder": "e.g. 10117", "geography": "data/de_areas.geojson.gz", "boundaries": "data/de_boundaries.geojson.gz", "count": counts["de"]},
             "gb": {"label": "England & Wales", "area_label": "LSOA", "search_placeholder": "e.g. E01000001", "geography": "data/gb_areas.geojson.gz", "boundaries": "data/gb_boundaries.geojson.gz", "count": counts["gb"]},
+            "fr": {"label": "France", "area_label": "Commune", "search_placeholder": "e.g. FR75101", "geography": "data/fr_areas.geojson.gz", "boundaries": "data/fr_boundaries.geojson.gz", "count": counts["fr"]},
         },
         "products": products,
     }

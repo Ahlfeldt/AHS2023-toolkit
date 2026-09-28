@@ -43,6 +43,7 @@ h2 { margin:0; font-size:clamp(1.35rem,2vw,2rem); font-weight:700; }
 .map-attribution { position:absolute; right:4px; bottom:3px; z-index:2; padding:2px 4px; background:rgba(255,255,255,.82); color:#555; font-size:9px; line-height:1.2; }
 .map-attribution a { color:inherit; }
 .area-shape { vector-effect:non-scaling-stroke; stroke:rgba(255,255,255,.28); stroke-width:.08; stroke-linejoin:round; transition:fill .12s ease; }
+.area-shape.country-fr { stroke:none; }
 .area-shape:hover { stroke:var(--ink); stroke-width:1.1; }
 .area-shape.selected { stroke:#fff; stroke-width:2; filter:drop-shadow(0 0 2px rgba(0,0,0,.6)); }
 .boundaries { pointer-events:none; }
