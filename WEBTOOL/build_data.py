@@ -38,7 +38,7 @@ PRODUCTS = {
     },
     "gb_purchase": {
         "country": "gb", "label": "Residential purchase price", "unit": "£ per m²", "currency": "GBP",
-        "source": REEF / "Data" / "LSE-REEF-INDEX-2020.csv",
+        "source": REEF / "Data" / "LSE-REEF-INDEX-2025.csv",
     },
     "fr_purchase": {
         "country": "fr", "label": "Residential purchase price", "unit": "€ per m²", "currency": "EUR",
@@ -109,10 +109,12 @@ def build_german_product(key: str, config: dict[str, object]) -> dict[str, objec
 
 def build_reef_product(key: str, config: dict[str, object]) -> dict[str, object]:
     wide = pd.read_csv(config["source"])
+    wide = wide.rename(columns={"LSOA11CD": "target_id"})
     names = gpd.read_file(REEF / "Shapefile" / "LSE-REEF-INDEX-2020.shp")[["target_id", "LSOA11NM"]]
     wide = wide.merge(names, on="target_id", how="left")
     rows = []
-    for year in range(2010, 2021):
+    years = sorted(int(column.removeprefix("p_")) for column in wide if column.startswith("p_"))
+    for year in years:
         part = wide[["target_id", "LSOA11NM", f"p_{year}", f"se_{year}"]].copy()
         part.columns = ["area", "name", "value", "se"]
         part["year"] = year

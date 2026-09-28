@@ -52,9 +52,9 @@
       "unit": "£ per m²",
       "currency": "GBP",
       "file": "data/gb_purchase.csv.gz",
-      "first_year": 2010,
-      "last_year": 2020,
-      "observations": 382283
+      "first_year": 1995,
+      "last_year": 2025,
+      "observations": 1077343
     },
     "fr_purchase": {
       "country": "fr",
