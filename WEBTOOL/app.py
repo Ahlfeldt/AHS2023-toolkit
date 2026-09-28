@@ -20,19 +20,20 @@ def _number(value: str, integer: bool = False):
     return int(float(value)) if integer else float(value)
 
 
-async def load_data(urls_json: str) -> str:
-    for key, url in json.loads(urls_json).items():
-        response = await pyfetch(url)
-        response.raise_for_status()
-        raw = gzip.decompress(await response.bytes()).decode("utf-8")
-        by_area = defaultdict(list)
-        for row in csv.DictReader(io.StringIO(raw)):
-            by_area[row["area"]].append({
-                "name": row["name"], "year": _number(row["year"], True),
-                "value": _number(row["value"]), "se": _number(row["se"]),
-                "obs": _number(row["obs"], True), "radius": _number(row["radius"]),
-            })
-        DATA[key] = dict(by_area)
+async def load_product(key: str, url: str) -> str:
+    if key in DATA:
+        return json.dumps({"product": key, "cached": True})
+    response = await pyfetch(url)
+    response.raise_for_status()
+    raw = gzip.decompress(await response.bytes()).decode("utf-8")
+    by_area = defaultdict(list)
+    for row in csv.DictReader(io.StringIO(raw)):
+        by_area[row["area"]].append({
+            "name": row["name"], "year": _number(row["year"], True),
+            "value": _number(row["value"]), "se": _number(row["se"]),
+            "obs": _number(row["obs"], True), "radius": _number(row["radius"]),
+        })
+    DATA[key] = dict(by_area)
     return json.dumps({"products": len(DATA)})
 
 

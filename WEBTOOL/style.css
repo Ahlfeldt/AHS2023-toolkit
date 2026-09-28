@@ -36,7 +36,12 @@ h2 { margin:0; font-size:clamp(1.35rem,2vw,2rem); font-weight:700; }
 .quiet-button { background:transparent; border:1px solid var(--line); border-radius:2px; color:var(--accent-dark); padding:8px 11px; font-weight:700; cursor:pointer; }
 #map { position:relative; width:100%; height:clamp(510px,63vh,760px); margin-top:10px; overflow:hidden; cursor:grab; }
 #map:active { cursor:grabbing; }
-#map svg { width:100%; height:100%; display:block; }
+#map svg,#map canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+.tile-surface { z-index:0; }
+.area-canvas { z-index:1; }
+.overlay-surface { z-index:2; pointer-events:none; }
+.map-empty { position:absolute; inset:0; z-index:1; display:grid; place-items:center; color:#3d3932; font-size:.95rem; text-align:center; pointer-events:none; }
+.map-empty span { padding:.7rem 1rem; border:1px solid rgba(38,35,30,.18); border-radius:4px; background:rgba(248,246,240,.88); box-shadow:0 4px 16px rgba(38,35,30,.1); backdrop-filter:blur(2px); }
 .map-tiles { pointer-events:none; }
 .map-tiles image { filter:grayscale(1) contrast(.9) brightness(1.08); }
 .area-layer { transition:opacity .12s ease; }

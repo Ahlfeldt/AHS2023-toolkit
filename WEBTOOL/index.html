@@ -9,12 +9,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" href="style.css?v=20260928-1">
+  <link rel="stylesheet" href="style.css?v=20260929-1">
   <script defer src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/d3-tile@1/dist/d3-tile.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.js"></script>
-  <script defer src="main.js?v=20260928-2"></script>
+  <script defer src="main.js?v=20260929-3"></script>
 </head>
 <body>
   <main class="app-shell">
@@ -25,9 +25,9 @@
           <label><span>Market</span><select id="market" disabled><option value="purchase">Residential purchase price</option><option value="rent">Residential rent</option></select></label>
           <fieldset class="country-control" disabled>
             <legend>Countries</legend>
-            <label><input type="checkbox" name="country" value="de" checked> Germany</label>
-            <label><input type="checkbox" name="country" value="gb" checked> England &amp; Wales</label>
-            <label><input type="checkbox" name="country" value="fr" checked> France</label>
+            <label><input type="checkbox" name="country" value="de"> Germany</label>
+            <label><input type="checkbox" name="country" value="gb"> England &amp; Wales</label>
+            <label><input type="checkbox" name="country" value="fr"> France</label>
           </fieldset>
           <label><span>Currency</span><select id="currency" disabled><option value="EUR">EUR (€)</option><option value="GBP">GBP (£)</option></select></label>
           <label class="year-control">
@@ -58,13 +58,13 @@
         </div>
       </div>
       <p id="fx-note" class="fx-note"></p>
-      <div class="status" id="status" role="status"><span class="spinner"></span> Loading the atlas…</div>
+      <div class="status" id="status" role="status"><span class="spinner"></span> Preparing the atlas…</div>
     </section>
 
     <section class="dashboard">
       <article class="panel map-panel">
         <div class="panel-heading">
-          <div><p class="kicker" id="map-kicker">Residential purchase price</p><h2 id="map-title">Price level</h2></div>
+          <div><p class="kicker" id="map-kicker">Residential purchase price</p><h2 id="map-title">Select a country to begin</h2></div>
           <button id="reset-map" class="quiet-button" type="button" disabled>Reset map</button>
         </div>
         <div id="map" aria-label="Interactive property-price map">
