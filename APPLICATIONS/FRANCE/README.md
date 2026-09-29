@@ -9,6 +9,12 @@ purchase-price index used by the combined browser atlas.
 - Source transactions: Cerema DVF+ 2026-1
 - Estimator: AHS residential purchase-price index
 
+## Citation requirement
+
+Use of this index is conditional on citing Ahlfeldt, Heblich and Seidel (2023),
+*Micro-geographic property price and rent indices*, Regional Science and Urban
+Economics 98. https://doi.org/10.1016/j.regsciurbeco.2022.103836
+
 ## Files available from GitHub
 
 - [`Data/AHS-FRANCE-COMMUNE-2026.csv`](Data/AHS-FRANCE-COMMUNE-2026.csv) is the

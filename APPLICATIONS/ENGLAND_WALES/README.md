@@ -18,5 +18,12 @@ LSOA boundaries used by the webtool. See
 `README-LSE-REEF-INDEX-2020.txt` for the authors' original documentation and
 terms of use.
 
-When using these data, cite Ahlfeldt, Carozzi and Makovsky (2023), *A
+## Citation requirements
+
+Use of the index through the AHS toolkit is conditional on citing Ahlfeldt,
+Heblich and Seidel (2023), *Micro-geographic property price and rent indices*,
+Regional Science and Urban Economics 98.
+https://doi.org/10.1016/j.regsciurbeco.2022.103836
+
+When using these data, also cite Ahlfeldt, Carozzi and Makovsky (2023), *A
 micro-geographic house price index for England and Wales*.

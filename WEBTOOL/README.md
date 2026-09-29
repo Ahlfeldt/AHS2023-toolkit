@@ -6,6 +6,17 @@ England and Wales. Python runs
 locally in the visitor's browser through Pyodide; there is no application server
 and no collection of user data.
 
+## Citation requirement
+
+Use of the AHS indices is conditional on citing Ahlfeldt, Heblich and Seidel
+(2023), *Micro-geographic property price and rent indices*, Regional Science
+and Urban Economics 98.
+https://doi.org/10.1016/j.regsciurbeco.2022.103836
+
+Users of the England and Wales index should additionally cite Ahlfeldt, Carozzi
+and Makovsky (2023), *A micro-geographic house price index for England and
+Wales*.
+
 The controls are organised by market, followed by the countries for which that
 market is available. One or more countries can be shown on a single European
 map. Values can be displayed in euros or pounds; the viewer retrieves the latest

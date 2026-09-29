@@ -8,7 +8,7 @@ Version 0.91, 2024
 
 This folder contains applications of the algorithm by Ahlfeldt, Heblich, Seidel (2023) to generate micro-geographic property price and rent indices using **real data**. 
 
-When using these data in your work, please cite Ahlfeldt, Heblich, Seidel (2023): Micro-geographic property price and rent indices. Regional Science and Urban Economics, 98.
+Use of these data is conditional on citing Ahlfeldt, Heblich, Seidel (2023): Micro-geographic property price and rent indices. Regional Science and Urban Economics, 98.
 
 ## Editions
 
@@ -22,7 +22,7 @@ The `2026` edition updates the index, extending it to 2007-2025.
 
 ## Usage
 
-When using the toolkit in your work, please cite Ahlfeldt, Heblich, and Seidel (2023): “Micro-geographic property price and rent indices.” Regional Science and Urban Economics, 98. https://doi.org/10.1016/j.regsciurbeco.2022.103836.
+Use of the toolkit or its AHS indices is conditional on citing Ahlfeldt, Heblich, and Seidel (2023): “Micro-geographic property price and rent indices.” Regional Science and Urban Economics, 98. https://doi.org/10.1016/j.regsciurbeco.2022.103836.
 This applies to all not-for-profit uses and includes any use of the micro-geographic indices published in this repository.
 
 ## Commercial indices
